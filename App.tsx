@@ -8,10 +8,10 @@
  * @format
  */
 
-import React from 'react';
-import {ThemeProvider} from 'styled-components/native';
-import Router from './src/routes';
-import {light} from './src/themes';
+import React from "react";
+import { ThemeProvider } from "styled-components/native";
+import Router from "./src/routes";
+import { light } from "./src/themes";
 
 const App = () => {
   return (
