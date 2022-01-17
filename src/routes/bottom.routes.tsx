@@ -9,6 +9,7 @@ import Login from "../screens/session/Login";
 import { BottomTab } from "../components/BottomTab";
 import Register from "../screens/session/Register";
 import Menu from "../screens/Menu";
+import Lunch from "../screens/Lunch";
 
 const Tab = createBottomTabNavigator();
 

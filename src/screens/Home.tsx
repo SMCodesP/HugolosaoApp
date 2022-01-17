@@ -26,7 +26,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
   const [history, setHistory] = useState<THistoryItem[]>([]);
-  const [mostSellers, setMostSellers] = useState<TMostSeller[]>([]);
+  const [mostSellers, setMostSellers] = useState<THistoryItem[]>([]);
 
   useEffect(() => {
     (async () => {
@@ -34,10 +34,7 @@ const Home = () => {
         "/history?_sort=assessment&_order=desc"
       );
       setHistory(data_history);
-      const { data: data_most_seller } = await api.get<TMostSeller[]>(
-        "/most_seller?_sort=assessment&_order=desc"
-      );
-      setMostSellers(data_most_seller);
+      setMostSellers(data_history.sort((a, b) => b.sold - a.sold));
     })();
   }, []);
 
@@ -49,7 +46,7 @@ const Home = () => {
             <HomeTitle>Olá SMCodes,</HomeTitle>
             <HomeSubTitle>O que você quer comer hoje?</HomeSubTitle>
           </View>
-          <UserAvatar source={require("../../assets/avatar_three.jpg")} />
+          <UserAvatar source={require("../../assets/avatar_test.jpg")} />
         </ContainerHead>
       </ContainerHome>
 
@@ -91,7 +88,7 @@ const Home = () => {
       <TitleItem>Mais vendidos</TitleItem>
       <FlatList
         data={mostSellers}
-        renderItem={CardMostSeller}
+        renderItem={({ ...props }) => <CardMostSeller {...props} />}
         keyExtractor={(item) => item.id}
         nestedScrollEnabled={true}
         scrollEnabled={false}

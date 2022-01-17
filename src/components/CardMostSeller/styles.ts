@@ -1,3 +1,4 @@
+import { RectButton } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
 
@@ -17,22 +18,23 @@ export const ContainerQuantity = styled.View`
   align-items: center;
 `;
 
-export const Container = styled(Shadow).attrs(({ theme }) => ({
-  containerViewStyle: {
-    marginVertical: "1%",
-    marginHorizontal: 5,
-  },
+export const ButtonMostSeller = styled(RectButton)`
+  margin: 1% 5px;
+  background-color: ${({ theme }) => theme.orange};
+  border-radius: 8px;
+`;
+
+export const Container = styled(Shadow).attrs({
+  containerViewStyle: {},
   viewStyle: {
     justifyContent: "space-between",
     alignItems: "center",
     padding: 8,
     flexDirection: "row",
-    backgroundColor: theme.orange,
-    borderRadius: 8,
     paddingVertical: 8,
     width: "100%",
   },
   distance: 5,
   getChildRadius: false,
-  startColor: "#00000008",
-}))``;
+  startColor: "#00000015",
+})``;

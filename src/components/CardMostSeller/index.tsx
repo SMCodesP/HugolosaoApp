@@ -1,7 +1,8 @@
 import React from "react";
-import { ListRenderItem } from "react-native";
+import { ListRenderItem, View } from "react-native";
 
 import {
+  ButtonMostSeller,
   Container,
   ContainerQuantity,
   Quantity,
@@ -10,17 +11,30 @@ import {
 
 import Feather from "react-native-vector-icons/Feather";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 
-const CardMostSeller: ListRenderItem<TMostSeller> = ({ item }) => {
+const CardMostSeller: React.FC<{
+  item: THistoryItem;
+}> = ({ item }) => {
+  const navigation = useNavigation();
+
+  const handleNavigation = () => {
+    (navigation as any).navigate("Lunch", { item });
+  };
+
   return (
-    <Container>
-      <TitleCardMostSeller>{item.name}</TitleCardMostSeller>
-      <ContainerQuantity>
-        <MaterialCommunityIcons size={21} name="crown-outline" />
-        <Quantity>{item.quantity}</Quantity>
-        <Feather size={28} name="chevron-right" />
-      </ContainerQuantity>
-    </Container>
+    <ButtonMostSeller onPress={handleNavigation}>
+      <View accessible>
+        <Container>
+          <TitleCardMostSeller>{item.name}</TitleCardMostSeller>
+          <ContainerQuantity>
+            <MaterialCommunityIcons size={21} name="crown-outline" />
+            <Quantity>{item.sold}</Quantity>
+            <Feather size={28} name="chevron-right" />
+          </ContainerQuantity>
+        </Container>
+      </View>
+    </ButtonMostSeller>
   );
 };
 

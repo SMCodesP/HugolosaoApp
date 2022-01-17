@@ -71,7 +71,7 @@ export const CardLunchUntried = styled(Shadow).attrs({
   },
   distance: 5,
   getChildRadius: false,
-  startColor: "#00000008",
+  startColor: "#00000015",
 })``;
 
 export const ContainerShadow = styled(Shadow).attrs(({ theme }) => ({
@@ -89,7 +89,7 @@ export const ContainerShadow = styled(Shadow).attrs(({ theme }) => ({
   },
   distance: 5,
   getChildRadius: false,
-  startColor: "#00000008",
+  startColor: "#00000015",
 }))``;
 
 export const InputItem = styled(TextInput).attrs(({ theme }) => ({

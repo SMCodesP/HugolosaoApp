@@ -41,7 +41,7 @@ export const TimeoutItem = styled.Text`
 
 export const Container = styled(Shadow).attrs(({ theme }) => ({
   containerViewStyle: {
-    marginVertical: "1%",
+    marginVertical: 5,
     marginHorizontal: 5,
   },
   viewStyle: {
@@ -53,5 +53,5 @@ export const Container = styled(Shadow).attrs(({ theme }) => ({
   },
   distance: 5,
   getChildRadius: false,
-  startColor: "#00000008",
+  startColor: "#00000015",
 }))``;

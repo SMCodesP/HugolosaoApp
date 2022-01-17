@@ -5,4 +5,13 @@ interface THistoryItem {
   image: string;
   timeout: string;
   assessment: number;
+  sold: number;
+  image_size: {
+    width: number;
+    height: number;
+  };
+  ingredients: {
+    name: string;
+    blocked: boolean;
+  }[];
 }

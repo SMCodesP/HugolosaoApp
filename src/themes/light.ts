@@ -11,7 +11,7 @@ const light = {
   orange: "#E89E64",
   pink: "#FF79C6",
   purple: "#988BC7",
-  red: "#E96379",
+  red: "#e41d3e",
   yellow: "#E7DE79",
 };
 
