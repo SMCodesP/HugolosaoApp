@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions, ScrollView } from "react-native";
 import FastImage from "react-native-fast-image";
 import { RectButton } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
@@ -18,7 +18,7 @@ export const Header = styled.View`
   flex-direction: column;
 `;
 
-export const Footer = styled.ScrollView`
+export const Footer = styled(ScrollView)`
   flex: 1;
   padding: 0 25px 0 25px;
   background-color: ${({ theme }) => theme.selection};

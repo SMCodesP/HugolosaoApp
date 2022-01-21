@@ -86,16 +86,15 @@ const Home = () => {
       />
 
       <TitleItem>Mais vendidos</TitleItem>
-      <FlatList
-        data={mostSellers}
-        renderItem={({ ...props }) => <CardMostSeller {...props} />}
-        keyExtractor={(item) => item.id}
-        nestedScrollEnabled={true}
-        scrollEnabled={false}
+      <View
         style={{
           marginBottom: 85,
         }}
-      />
+      >
+        {mostSellers.map((mostSeller, index) => (
+          <CardMostSeller key={mostSeller.id} item={mostSeller} />
+        ))}
+      </View>
     </ScrollView>
   );
 };
