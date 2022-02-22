@@ -1,0 +1,318 @@
+{
+  "history": [
+    {
+      "id": "mU2q3OuH8eWjWnNb5h1bxA7L294sQMmw",
+      "name": "Artesanal Kids",
+      "price": 34,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/artesanal_kids_menqku.jpg",
+      "assessment": 4.5,
+      "sold": 5,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Batata smile",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "eCn0DooNuoC0yywuo6FgjQWHUKBkVXhq",
+      "name": "Artesanal Australian Burger",
+      "price": 29,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/australian_burger_bfwcul.jpg",
+      "assessment": 4.0,
+      "sold": 18,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão australiano",
+          "blocked": true
+        },
+        {
+          "name": "Bacon crocante",
+          "blocked": false
+        },
+        {
+          "name": "Cream cheese",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Tomate",
+          "blocked": false
+        },
+        {
+          "name": "Alface americana",
+          "blocked": false
+        },
+        {
+          "name": "Pão australiano",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "B9WI1p870n4SDhPfWkvoMkWwKwVmHWoP",
+      "name": "Artesanal Chicken Bacon",
+      "price": 22,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/chicken_bacon_xnyqur.jpg",
+      "assessment": 4.4,
+      "sold": 15,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Bacon crocante",
+          "blocked": false
+        },
+        {
+          "name": "Catupiry original",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de frango",
+          "blocked": false
+        },
+        {
+          "name": "Tomate",
+          "blocked": false
+        },
+        {
+          "name": "Cebola roxa",
+          "blocked": false
+        },
+        {
+          "name": "Alface americana",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "PNCaCJ38X2cijmi6DTiYMwWExZ9hgqrf",
+      "name": "Artesanal Salad",
+      "price": 21,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/salad_burger_tol1tx.jpg",
+      "assessment": 4.2,
+      "sold": 11,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Doritos",
+          "blocked": false
+        },
+        {
+          "name": "Catupiry original",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Tomate",
+          "blocked": false
+        },
+        {
+          "name": "Alface americana",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "gG6tx0rzmg5p6zYgNCbVRxoGc7MKDyHh",
+      "name": "Artesanal Cheddar Bacon",
+      "price": 46,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/cheddar_bacon_ei0xvy.jpg",
+      "assessment": 4.9,
+      "sold": 2,
+      "image_size": {
+        "width": 988,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Cebola caramelizada",
+          "blocked": false
+        },
+        {
+          "name": "Bacon crocante",
+          "blocked": false
+        },
+        {
+          "name": "Cheddar",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "FvIAGypJnS3iNZ9QL3vYQijqvw4qcGPp",
+      "name": "Artesanal Rúcula",
+      "price": 27,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/arugula_burger_dzmeuv.jpg",
+      "assessment": 4.1,
+      "sold": 15,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Cebola roxa",
+          "blocked": false
+        },
+        {
+          "name": "Tomate seco",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Rúcula",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    },
+    {
+      "id": "x2Nzo89ie0eMlV7C42hBSsQpwrOEkIEc",
+      "name": "Artesanal Triplo Queijo",
+      "price": 28,
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492720/triple_cheese_gkblmf.jpg",
+      "assessment": 4.5,
+      "sold": 4,
+      "image_size": {
+        "width": 854,
+        "height": 854
+      },
+      "ingredients": [
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        },
+        {
+          "name": "Cebola caramelizada",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Queijo",
+          "blocked": false
+        },
+        {
+          "name": "Hambúrguer de costela",
+          "blocked": false
+        },
+        {
+          "name": "Pão de brioche",
+          "blocked": true
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import FastImage from "react-native-fast-image";
 import { RectButton } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
+import { SpringScrollView } from "react-native-spring-scrollview";
+import { DefaultText } from "./global";
 
 const { height: HEIGHT, width: WIDTH } = Dimensions.get("window");
 
@@ -18,16 +20,15 @@ export const Header = styled.View`
   flex-direction: column;
 `;
 
-export const Footer = styled(ScrollView)`
+export const Footer = styled(SpringScrollView)`
   flex: 1;
   padding: 0 25px 0 25px;
   background-color: ${({ theme }) => theme.selection};
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-bottom: 24px;
 `;
 
-export const LunchTitle = styled.Text`
+export const LunchTitle = styled(DefaultText)`
   font-size: 26px;
   font-family: "Jost-Bold";
   margin-top: 20px;
@@ -40,7 +41,7 @@ export const QuantityPrice = styled.View`
   margin-top: 30px;
 `;
 
-export const LunchPrice = styled.Text`
+export const LunchPrice = styled(DefaultText)`
   font-size: 18px;
   font-family: "Jost-Medium";
 `;
@@ -56,7 +57,7 @@ export const QuantityButtonAddRemove = styled(RectButton)`
   border-radius: 5px;
 `;
 
-export const QuantityTextAddRemove = styled.Text`
+export const QuantityTextAddRemove = styled(DefaultText)`
   font-size: 12px;
   font-family: "Jost-Bold";
 `;
@@ -66,6 +67,7 @@ export const QuantityInput = styled.TextInput`
   font-family: "Jost-Regular";
   text-align: center;
   padding: 0 5px;
+  color: ${({ theme }) => theme.foreground};
 `;
 
 export const BackButton = styled(RectButton)`
@@ -88,7 +90,7 @@ export const ContainerInformation = styled.View`
   margin-right: 15px;
 `;
 
-export const TextInformation = styled.Text`
+export const TextInformation = styled(DefaultText)`
   font-family: "Jost-Regular";
   margin-left: 8px;
   font-size: 13px;
@@ -109,7 +111,7 @@ export const ContainerAccessibleButtonAddToCart = styled.View`
   padding: 14px 0;
 `;
 
-export const ButtonAddToCartText = styled.Text`
+export const ButtonAddToCartText = styled(DefaultText)`
   font-size: 17px;
   font-family: "Jost-Medium";
   margin: 0 8px;
@@ -124,7 +126,7 @@ export const CardIngredient = styled.View`
   background-color: ${({ theme }) => theme.orange};
 `;
 
-export const TextIngredient = styled.Text`
+export const TextIngredient = styled(DefaultText)`
   font-family: "Jost-Regular";
   font-size: 15px;
 `;

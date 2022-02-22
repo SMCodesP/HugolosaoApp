@@ -72,7 +72,10 @@ const Lunch: React.FC<{
           </BackButton>
         </ContainerButtonShadow>
         <ContainerImageShadow>
-          <ImageLunch imageSize={item.image_size} source={snacks[item.image]} />
+          <ImageLunch
+            imageSize={item.image_size}
+            source={{ uri: item.image }}
+          />
         </ContainerImageShadow>
       </Header>
       <ContainerFooterShadow>
@@ -102,7 +105,7 @@ const Lunch: React.FC<{
           </QuantityPrice>
           <ContainerListInformation>
             <ContainerInformation>
-              <AntDesign size={13} name="star" />
+              <AntDesign size={13} name="star" color={theme.foreground} />
               <TextInformation>4.7</TextInformation>
             </ContainerInformation>
             {/* <ContainerInformation>
@@ -116,7 +119,11 @@ const Lunch: React.FC<{
           </ContainerListInformation>
           <ButtonAddToCart>
             <ContainerAccessibleButtonAddToCart accessible>
-              <MaterialCommunityIcons size={17} name="cart" />
+              <MaterialCommunityIcons
+                size={17}
+                name="cart"
+                color={theme.foreground}
+              />
               <ButtonAddToCartText>Adicionar ao carrinho</ButtonAddToCartText>
             </ContainerAccessibleButtonAddToCart>
           </ButtonAddToCart>

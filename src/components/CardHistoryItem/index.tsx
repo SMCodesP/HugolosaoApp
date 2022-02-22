@@ -16,12 +16,11 @@ const CardHistoryItem: ListRenderItem<THistoryItem> = ({ item }) => {
   return (
     <Container>
       <ContainerHistoryThumbnail>
-        <HistoryThumbnail source={snacks[item.image]} />
+        <HistoryThumbnail source={{ uri: item.image }} />
       </ContainerHistoryThumbnail>
       <TitleItem disabled={true}>{item.name}</TitleItem>
       <FooterSectionCard>
         <PriceItem>R$ {item.price}</PriceItem>
-        <TimeoutItem>{item.timeout}</TimeoutItem>
       </FooterSectionCard>
     </Container>
   );

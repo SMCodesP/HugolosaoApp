@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, ScrollView, View } from "react-native";
+import { FlatList, View } from "react-native";
 
 import Feather from "react-native-vector-icons/Feather";
+import { useTheme } from "styled-components/native";
+import { SpringScrollView } from "react-native-spring-scrollview";
+
 import CardHistoryItem from "../components/CardHistoryItem";
 import CardMostSeller from "../components/CardMostSeller";
 import { api } from "../services/api";
@@ -28,6 +31,8 @@ const Home = () => {
   const [history, setHistory] = useState<THistoryItem[]>([]);
   const [mostSellers, setMostSellers] = useState<THistoryItem[]>([]);
 
+  const theme = useTheme();
+
   useEffect(() => {
     (async () => {
       const { data: data_history } = await api.get<THistoryItem[]>(
@@ -39,7 +44,7 @@ const Home = () => {
   }, []);
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <SpringScrollView showsVerticalScrollIndicator={false}>
       <ContainerHome>
         <ContainerHead>
           <View>
@@ -64,11 +69,15 @@ const Home = () => {
 
       <CardLunchUntried>
         <ButtonLunch>
-          <IconLunchUntried size={42} name="lunch-dining" />
+          <IconLunchUntried
+            size={42}
+            name="lunch-dining"
+            color={theme.foreground}
+          />
           <TextLunchUntried>
             Você tem 13 variedades que ainda não experimentou.
           </TextLunchUntried>
-          <Feather size={36} name="chevron-right" />
+          <Feather size={36} name="chevron-right" color={theme.foreground} />
         </ButtonLunch>
       </CardLunchUntried>
 
@@ -95,7 +104,7 @@ const Home = () => {
           <CardMostSeller key={mostSeller.id} item={mostSeller} />
         ))}
       </View>
-    </ScrollView>
+    </SpringScrollView>
   );
 };
 

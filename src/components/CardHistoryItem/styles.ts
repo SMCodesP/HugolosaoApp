@@ -3,6 +3,7 @@ import FastImage from "react-native-fast-image";
 import { Shadow } from "react-native-shadow-2";
 import TextTicker from "react-native-text-ticker";
 import { darken } from "polished";
+import { DefaultText } from "../../styles/global";
 
 export const ContainerHistoryThumbnail = styled.View``;
 
@@ -19,6 +20,7 @@ export const TitleItem = styled(TextTicker)`
   font-family: "Jost-Medium";
   margin-left: 8px;
   padding-right: 12px;
+  color: ${({ theme }) => theme.foreground};
 `;
 
 export const FooterSectionCard = styled.View`
@@ -28,13 +30,13 @@ export const FooterSectionCard = styled.View`
   justify-content: space-between;
 `;
 
-export const PriceItem = styled.Text`
+export const PriceItem = styled(DefaultText)`
   font-size: 12px;
   font-family: "Jost-Medium";
   color: ${({ theme }) => darken(0.1, theme.green)};
 `;
 
-export const TimeoutItem = styled.Text`
+export const TimeoutItem = styled(DefaultText)`
   font-size: 12px;
   font-family: "Jost-Medium";
 `;

@@ -3,7 +3,6 @@ interface THistoryItem {
   name: string;
   price: number;
   image: string;
-  timeout: string;
   assessment: number;
   sold: number;
   image_size: {

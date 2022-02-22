@@ -5,6 +5,7 @@ import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import { DefaultText } from "./global";
 
 export const ContainerHome = styled.View`
   padding: 20px 15px;
@@ -16,13 +17,13 @@ export const ContainerHead = styled.View`
   align-items: center;
 `;
 
-export const HomeTitle = styled.Text`
+export const HomeTitle = styled(DefaultText)`
   font-size: 24px;
   font-family: "Jost-Medium";
   color: ${({ theme }) => theme.orange};
 `;
 
-export const HomeSubTitle = styled.Text`
+export const HomeSubTitle = styled(DefaultText)`
   font-size: 16px;
   font-family: "Jost-Regular";
 `;
@@ -39,7 +40,7 @@ export const IconLunchUntried = styled(MaterialIcons)`
   transform: rotate(-45deg);
 `;
 
-export const TextLunchUntried = styled.Text`
+export const TextLunchUntried = styled(DefaultText)`
   flex: 1;
   flex-grow: 1;
   padding-left: 15px;
@@ -55,7 +56,7 @@ export const ButtonLunch = styled(RectButton)`
   padding: 15px 10px;
 `;
 
-export const TitleItem = styled.Text`
+export const TitleItem = styled(DefaultText)`
   font-family: "Jost-Bold";
   font-size: 20px;
   padding-left: 15px;

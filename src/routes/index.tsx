@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 
 const Router = () => {
   const theme = useTheme();
+
   return (
     <NavigationContainer
       theme={{
