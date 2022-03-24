@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ScrollView, View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, ScrollView } from "react-native";
 
-import { SpringScrollView } from "react-native-spring-scrollview";
 import { useNavigation } from "@react-navigation/native";
 
 import {
@@ -28,7 +27,7 @@ const Login: React.FC = () => {
   const navigation = useNavigation();
 
   return (
-    <SpringScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <ContainerSession behavior="position">
         <ContainerForm>
           <Title>Entre</Title>
@@ -84,7 +83,7 @@ const Login: React.FC = () => {
           </TouchableOpacity>
         </FooterSection>
       </ContainerSession>
-    </SpringScrollView>
+    </ScrollView>
   );
 };
 

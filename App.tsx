@@ -10,6 +10,7 @@
 
 import React from "react";
 import { ThemeProvider } from "styled-components/native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Router from "./src/routes";
 import { light } from "./src/themes";
 

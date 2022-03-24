@@ -48,7 +48,7 @@ export const Container = styled(Shadow).attrs(({ theme }) => ({
   },
   viewStyle: {
     justifyContent: "center",
-    backgroundColor: "#fafafa",
+    backgroundColor: theme.white,
     borderRadius: 8,
     paddingVertical: 8,
     width: 176,

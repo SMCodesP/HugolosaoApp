@@ -3,7 +3,6 @@ import FastImage from "react-native-fast-image";
 import { RectButton } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
-import { SpringScrollView } from "react-native-spring-scrollview";
 import { DefaultText } from "./global";
 
 const { height: HEIGHT, width: WIDTH } = Dimensions.get("window");
@@ -20,7 +19,7 @@ export const Header = styled.View`
   flex-direction: column;
 `;
 
-export const Footer = styled(SpringScrollView)`
+export const Footer = styled(ScrollView)`
   flex: 1;
   padding: 0 25px 0 25px;
   background-color: ${({ theme }) => theme.selection};

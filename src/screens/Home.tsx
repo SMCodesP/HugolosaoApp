@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, View, ScrollView } from "react-native";
 
 import Feather from "react-native-vector-icons/Feather";
 import { useTheme } from "styled-components/native";
-import { SpringScrollView } from "react-native-spring-scrollview";
 
 import CardHistoryItem from "../components/CardHistoryItem";
 import CardMostSeller from "../components/CardMostSeller";
@@ -44,14 +43,14 @@ const Home = () => {
   }, []);
 
   return (
-    <SpringScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <ContainerHome>
         <ContainerHead>
           <View>
             <HomeTitle>Olá SMCodes,</HomeTitle>
             <HomeSubTitle>O que você quer comer hoje?</HomeSubTitle>
           </View>
-          <UserAvatar source={require("../../assets/avatar_test.jpg")} />
+          <Feather name="more-vertical" size={24} color={theme.foreground} />
         </ContainerHead>
       </ContainerHome>
 
@@ -104,7 +103,7 @@ const Home = () => {
           <CardMostSeller key={mostSeller.id} item={mostSeller} />
         ))}
       </View>
-    </SpringScrollView>
+    </ScrollView>
   );
 };
 

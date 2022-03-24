@@ -13,6 +13,7 @@ const light = {
   purple: "#988BC7",
   red: "#e41d3e",
   yellow: "#E7DE79",
+  white: "#f0e8e8",
 };
 
 export default light;
