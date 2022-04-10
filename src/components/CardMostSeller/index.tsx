@@ -23,7 +23,7 @@ const CardMostSeller: React.FC<{
   };
 
   return (
-    <ButtonMostSeller onPress={handleNavigation}>
+    <ButtonMostSeller onPress={handleNavigation} rippleColor="#00000022">
       <View accessible>
         <Container>
           <TitleCardMostSeller>{item.name}</TitleCardMostSeller>

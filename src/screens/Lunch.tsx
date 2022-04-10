@@ -67,7 +67,7 @@ const Lunch: React.FC<{
     <Container behavior="padding">
       <Header>
         <ContainerButtonShadow>
-          <BackButton onPress={navigation.goBack}>
+          <BackButton rippleColor="#00000022" onPress={navigation.goBack}>
             <Feather size={28} name="chevron-left" />
           </BackButton>
         </ContainerButtonShadow>

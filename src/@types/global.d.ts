@@ -17,3 +17,5 @@ declare module "styled-components" {
     white: string;
   }
 }
+
+declare module "get-color-sm";

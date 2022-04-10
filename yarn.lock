@@ -1458,7 +1458,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react-native-vector-icons@^6.4.10":
+"@types/react-native-vector-icons@^6.4.10", "@types/react-native-vector-icons@^6.4.5":
   version "6.4.10"
   resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.10.tgz#9bfd6e64dd37b8119425496b5e53ff91d034efa9"
   integrity sha512-z4sexbuZ7nmYsp7Z9YB5fSQoN3KFn6nZA3QsCkQLOYnVmVlxX4U22v/bM9Xx/6dOA1vClxoRZo2CFDX16uryXQ==
@@ -3634,6 +3634,11 @@ get-caller-file@^2.0.1, get-caller-file@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+
+get-color-sm@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/get-color-sm/-/get-color-sm-1.0.1.tgz#2a49b178401d7273ebecf190319c71c4c363fc21"
+  integrity sha512-xLdlspnGBndOr/YovVjul702bKB02millTHKd3fTu+PLwaAtDFblw+We0hVw6GZC0i6WFEdTW2xKPllOAX1JBQ==
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
   version "1.1.1"
@@ -6162,6 +6167,13 @@ react-native-text-ticker@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/react-native-text-ticker/-/react-native-text-ticker-1.14.0.tgz#dc537d2c587efc18ef19db9a85dc678a28aa8c57"
   integrity sha512-8TNGTcW43dfnCqIuXVA7F1Ny8SKGrw0pIrNS5nM7eda+6AsuPTZh3JQ2CwmSRYfsrlnS4QFrpyo5ykpI8nvtCw==
+
+react-native-textinput-effects@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/react-native-textinput-effects/-/react-native-textinput-effects-0.6.2.tgz#8b2590966eb9b8fb8781735f54df8ba2151769ff"
+  integrity sha512-ecy3jyCrJemePqq31M+wACfUB3Y8VWiY1mtwuhr3GRIiY2TeGvv+xjpj4xY6gAxXeCtl0Am1F182nLNKLJXx9Q==
+  dependencies:
+    "@types/react-native-vector-icons" "^6.4.5"
 
 react-native-vector-icons@^9.0.0:
   version "9.0.0"

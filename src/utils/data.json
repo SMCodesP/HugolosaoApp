@@ -1,4 +1,46 @@
 {
+  "menuOptions": [
+    {
+      "id": "2DSRt4fwkFJ1DSnOgD",
+      "name": "Bebidas",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648749554/589-5895502_refrescos-png_bq0pvk.png"
+    },
+    {
+      "id": "KVi5gi36VS2SqjBqa6",
+      "name": "Porções",
+      "image": "https://www.pngrepo.com/download/11501/french-fries-box.png"
+    },
+    {
+      "id": "fMgSNisRlw4nHUuMkR",
+      "name": "Lanches Artesanais",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    },
+    {
+      "id": "v2Om0Z0wPn3TrbDcWK",
+      "name": "Lanches Especiais",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    },
+    {
+      "id": "WmMJmiPm1bLnLOVMRv",
+      "name": "Lanches com Hambúrger",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    },
+    {
+      "id": "FBPhkAuoA8QsDO56SK",
+      "name": "Lanches com Frango",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    },
+    {
+      "id": "dRec8dU7Q1cGy8k8b2",
+      "name": "Lanches com Filé Mignon",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    },
+    {
+      "id": "yLXoBFEd4DlWCXLHSU",
+      "name": "Lanches com Hambúrger",
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648750737/output-onlinepngtools_bvixal.png"
+    }
+  ],
   "history": [
     {
       "id": "mU2q3OuH8eWjWnNb5h1bxA7L294sQMmw",

@@ -18,7 +18,7 @@ const CardHistoryItem: ListRenderItem<THistoryItem> = ({ item }) => {
   return (
     <Container>
       <RectButton
-        rippleColor="#00000055"
+        rippleColor="#00000022"
         onPress={() => console.log("clicou!")}
       >
         <ContainerHistoryThumbnail>
