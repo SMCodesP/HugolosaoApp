@@ -4,13 +4,13 @@ import { View } from "react-native";
 import { useTheme } from "styled-components/native";
 import CardOptionMenu from "../components/CardOptionMenu";
 import { api } from "../services/api";
-import { InputIconSearch, InputItem } from "../styles/home";
+import { Title } from "../styles/global";
+import { InputIconSearch, InputItem } from "../styles/pages/home";
 import {
   ContainerMenu,
   ContainerOptions,
   ContainerShadowSearchInput,
-  Title,
-} from "../styles/menu";
+} from "../styles/pages/menu";
 
 const Menu: React.FC = () => {
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
@@ -44,7 +44,7 @@ const Menu: React.FC = () => {
         data={options}
         renderItem={CardOptionMenu as any}
         numColumns={2}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item: any) => item.id}
       />
     </ContainerMenu>
   );

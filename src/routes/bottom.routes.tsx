@@ -10,6 +10,7 @@ import { BottomTab } from "../components/BottomTab";
 import Register from "../screens/session/Register";
 import Menu from "../screens/Menu";
 import Lunch from "../screens/Lunch";
+import Cart from "../screens/Cart";
 
 const Tab = createBottomTabNavigator();
 
@@ -65,6 +66,19 @@ const MyTabs = () => {
               color={color}
               size={22}
               name={focused ? "book" : "book-outline"}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Carrinho"
+        component={Cart}
+        options={{
+          tabBarIcon: ({ focused, color }) => (
+            <Ionicons
+              color={color}
+              size={22}
+              name={focused ? "cart" : "cart-outline"}
             />
           ),
         }}

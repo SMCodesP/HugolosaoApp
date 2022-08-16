@@ -5,7 +5,7 @@ import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import { DefaultText } from "./global";
+import { DefaultText } from "../global";
 
 export const ContainerHome = styled.View`
   padding: 20px 15px;

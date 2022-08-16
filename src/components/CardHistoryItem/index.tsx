@@ -1,12 +1,11 @@
-import { darken } from "polished";
 import React from "react";
 import { ListRenderItem } from "react-native";
 import { RectButton } from "react-native-gesture-handler";
-import { snacks } from "../../utils/snacks";
 
 import {
   Container,
   ContainerHistoryThumbnail,
+  ContainerItem,
   FooterSectionCard,
   HistoryThumbnail,
   PriceItem,
@@ -21,13 +20,15 @@ const CardHistoryItem: ListRenderItem<THistoryItem> = ({ item }) => {
         rippleColor="#00000022"
         onPress={() => console.log("clicou!")}
       >
-        <ContainerHistoryThumbnail>
-          <HistoryThumbnail source={{ uri: item.image }} />
-        </ContainerHistoryThumbnail>
-        <TitleItem disabled={true}>{item.name}</TitleItem>
-        <FooterSectionCard>
-          <PriceItem>R$ {item.price}</PriceItem>
-        </FooterSectionCard>
+        <ContainerItem>
+          <ContainerHistoryThumbnail>
+            <HistoryThumbnail source={{ uri: item.image }} />
+          </ContainerHistoryThumbnail>
+          <TitleItem disabled={true}>{item.name}</TitleItem>
+          <FooterSectionCard>
+            <PriceItem>R$ {item.price}</PriceItem>
+          </FooterSectionCard>
+        </ContainerItem>
       </RectButton>
     </Container>
   );

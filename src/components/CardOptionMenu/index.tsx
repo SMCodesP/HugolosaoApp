@@ -1,8 +1,5 @@
 import React from "react";
-import { View } from "react-native";
 import { Container, ContainerButton, ImageOption, ButtonText } from "./styles";
-import { getColor } from "get-color-sm";
-import { RectButton } from "react-native-gesture-handler";
 
 const CardOptionMenu: React.FC = ({ item }) => {
   return (

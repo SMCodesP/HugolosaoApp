@@ -22,7 +22,7 @@ import {
   TextLunchUntried,
   TitleItem,
   UserAvatar,
-} from "../styles/home";
+} from "../styles/pages/home";
 
 const Home = () => {
   const [search, setSearch] = useState("");

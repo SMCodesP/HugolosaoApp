@@ -5,12 +5,6 @@ export const ContainerMenu = styled.View`
   padding: 20px 15px;
 `;
 
-export const Title = styled.Text`
-  font-size: 24px;
-  font-family: "Jost-Medium";
-  color: ${({ theme }) => theme.orange};
-`;
-
 export const ContainerOptions = styled.FlatList`
   width: 100%;
 `;

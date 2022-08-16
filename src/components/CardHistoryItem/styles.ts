@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import FastImage from "react-native-fast-image";
 import { Shadow } from "react-native-shadow-2";
 import TextTicker from "react-native-text-ticker";
-import { darken } from "polished";
+import { darken, lighten } from "polished";
 import { DefaultText } from "../../styles/global";
 
 export const ContainerHistoryThumbnail = styled.View``;
@@ -41,16 +41,19 @@ export const TimeoutItem = styled(DefaultText)`
   font-family: "Jost-Medium";
 `;
 
+export const ContainerItem = styled.View`
+  padding: 8px 0;
+`;
+
 export const Container = styled(Shadow).attrs(({ theme }) => ({
   containerViewStyle: {
     marginVertical: 5,
-    marginHorizontal: 5,
+    marginHorizontal: 8,
   },
   viewStyle: {
     justifyContent: "center",
-    backgroundColor: theme.white,
+    backgroundColor: lighten(0.025, theme.selection),
     borderRadius: 8,
-    paddingVertical: 8,
     width: 176,
   },
   distance: 5,
