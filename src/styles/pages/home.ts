@@ -1,10 +1,7 @@
 import { transparentize } from "polished";
-import FastImage from "react-native-fast-image";
 import { RectButton, TextInput } from "react-native-gesture-handler";
-import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { DefaultText } from "../global";
 
 export const ContainerHome = styled.View`
@@ -20,6 +17,7 @@ export const ContainerHead = styled.View`
 export const HomeTitle = styled(DefaultText)`
   font-size: 24px;
   font-family: "Jost-Medium";
+  font-weight: medium;
   color: ${({ theme }) => theme.orange};
 `;
 
@@ -28,7 +26,7 @@ export const HomeSubTitle = styled(DefaultText)`
   font-family: "Jost-Regular";
 `;
 
-export const UserAvatar = styled(FastImage)`
+export const UserAvatar = styled.Image`
   width: 46px;
   height: 46px;
   border-radius: 46px;
@@ -58,40 +56,27 @@ export const ButtonLunch = styled(RectButton)`
 
 export const TitleItem = styled(DefaultText)`
   font-family: "Jost-Bold";
+  font-weight: bold;
   font-size: 20px;
   padding-left: 15px;
 `;
 
-export const CardLunchUntried = styled(Shadow).attrs({
-  containerViewStyle: {
-    marginVertical: "8%",
-    marginHorizontal: 15,
-  },
-  viewStyle: {
-    borderRadius: 10,
-  },
-  distance: 5,
-  getChildRadius: false,
-  startColor: "#00000015",
-})``;
+export const CardLunchUntried = styled.View`
+  margin: 8% 15px;
+  /* marginVertical: "8%",
+marginHorizontal: 15, */
+  border-radius: 10px;
+`;
 
-export const ContainerShadow = styled(Shadow).attrs(({ theme }) => ({
-  containerViewStyle: {
-    marginVertical: "1%",
-    marginHorizontal: 15,
-  },
-  viewStyle: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: theme.selection,
-    borderRadius: 10,
-    height: 42,
-    width: "100%",
-  },
-  distance: 5,
-  getChildRadius: false,
-  startColor: "#00000015",
-}))``;
+export const ContainerShadow = styled.View`
+  flex-direction: row;
+  align-items: center;
+  background-color: ${({ theme }) => theme.selection};
+  border-radius: 10px;
+  height: 42px;
+  width: 95%;
+  align-self: center;
+`;
 
 export const InputItem = styled(TextInput).attrs(({ theme }) => ({
   placeholderTextColor: transparentize(0.6, theme.foreground),

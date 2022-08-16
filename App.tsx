@@ -1,25 +1,26 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React from "react";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ThemeProvider } from "styled-components/native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Router from "./src/routes";
-import { light } from "./src/themes";
 
-const App = () => {
-  return (
-    <ThemeProvider theme={light}>
-      <Router />
-    </ThemeProvider>
-  );
-};
+import useCachedResources from "./src/hooks/useCachedResources";
+import Navigation from "./src/navigation";
+import light from "./src/themes/light";
 
-export default App;
+import "react-native-gesture-handler";
+
+export default function App() {
+  const isLoadingComplete = useCachedResources();
+
+  if (!isLoadingComplete) {
+    return null;
+  } else {
+    return (
+      <ThemeProvider theme={light}>
+        <SafeAreaProvider>
+          <Navigation />
+          <StatusBar />
+        </SafeAreaProvider>
+      </ThemeProvider>
+    );
+  }
+}

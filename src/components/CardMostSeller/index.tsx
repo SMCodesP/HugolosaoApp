@@ -9,8 +9,7 @@ import {
   TitleCardMostSeller,
 } from "./styles";
 
-import Feather from "react-native-vector-icons/Feather";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { MaterialCommunityIcons, Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 const CardMostSeller: React.FC<{

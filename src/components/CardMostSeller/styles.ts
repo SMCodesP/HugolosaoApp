@@ -1,5 +1,4 @@
 import { RectButton } from "react-native-gesture-handler";
-import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
 
 export const TitleCardMostSeller = styled.Text`
@@ -24,17 +23,10 @@ export const ButtonMostSeller = styled(RectButton)`
   border-radius: 8px;
 `;
 
-export const Container = styled(Shadow).attrs({
-  containerViewStyle: {},
-  viewStyle: {
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: 8,
-    flexDirection: "row",
-    paddingVertical: 8,
-    width: "100%",
-  },
-  distance: 5,
-  getChildRadius: false,
-  startColor: "#00000015",
-})``;
+export const Container = styled.View`
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  flex-direction: row;
+  width: 100%;
+`;
