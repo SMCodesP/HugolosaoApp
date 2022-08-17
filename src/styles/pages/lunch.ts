@@ -3,7 +3,7 @@ import FastImage from "react-native-fast-image";
 import { RectButton } from "react-native-gesture-handler";
 import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
-import { DefaultText } from "./global";
+import { DefaultText } from "../global";
 
 const { height: HEIGHT, width: WIDTH } = Dimensions.get("window");
 

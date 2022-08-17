@@ -1,4 +1,4 @@
-interface THistoryItem {
+interface TItem {
   id: string;
   name: string;
   price: number;

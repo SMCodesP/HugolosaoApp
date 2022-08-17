@@ -31,14 +31,16 @@ import {
   QuantityTextAddRemove,
   TextInformation,
   TextIngredient,
-} from "../styles/lunch";
+} from "../styles/pages/lunch";
 import { snacks } from "../utils/snacks";
 import { useTheme } from "styled-components/native";
+import QuantityItemInput from "../components/QuantityItemInput";
+import { useCart } from "../contexts/CartContext";
 
 const Lunch: React.FC<{
   route: {
     params: {
-      item: THistoryItem;
+      item: TItem;
     };
   };
 }> = ({
@@ -48,6 +50,7 @@ const Lunch: React.FC<{
 }) => {
   const [quantityItem, setQuantityItem] = useState(1);
   const [ingredients, setIngredients] = useState(item.ingredients || []);
+  const { addItemCart } = useCart();
   const navigation = useNavigation();
 
   const theme = useTheme();
@@ -86,22 +89,11 @@ const Lunch: React.FC<{
               R$ {(item.price * quantityItem).toFixed(2)}
               {quantityItem > 1 && ` x${quantityItem}`}
             </LunchPrice>
-            <QuantityContainer>
-              <QuantityButtonAddRemove onPress={handleRemoveItem}>
-                <View>
-                  <QuantityTextAddRemove>-</QuantityTextAddRemove>
-                </View>
-              </QuantityButtonAddRemove>
-              <QuantityInput
-                keyboardType="numeric"
-                value={String(quantityItem).padStart(2, "0")}
-              />
-              <QuantityButtonAddRemove onPress={handleAddItem}>
-                <View>
-                  <QuantityTextAddRemove>+</QuantityTextAddRemove>
-                </View>
-              </QuantityButtonAddRemove>
-            </QuantityContainer>
+            <QuantityItemInput
+              handleAdd={handleAddItem}
+              handleRemove={handleRemoveItem}
+              quantityItem={quantityItem}
+            />
           </QuantityPrice>
           <ContainerListInformation>
             <ContainerInformation>
@@ -117,7 +109,7 @@ const Lunch: React.FC<{
               <TextInformation>250 kcal</TextInformation>
             </ContainerInformation> */}
           </ContainerListInformation>
-          <ButtonAddToCart>
+          <ButtonAddToCart onPress={() => addItemCart(item, quantityItem)}>
             <ContainerAccessibleButtonAddToCart accessible>
               <MaterialCommunityIcons
                 size={17}

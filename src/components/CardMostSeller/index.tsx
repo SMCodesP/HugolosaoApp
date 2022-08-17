@@ -14,7 +14,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useNavigation } from "@react-navigation/native";
 
 const CardMostSeller: React.FC<{
-  item: THistoryItem;
+  item: TItem;
 }> = ({ item }) => {
   const navigation = useNavigation();
 

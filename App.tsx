@@ -13,11 +13,14 @@ import { ThemeProvider } from "styled-components/native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Router from "./src/routes";
 import { light } from "./src/themes";
+import { CartProvider } from "./src/contexts/CartContext";
 
 const App = () => {
   return (
     <ThemeProvider theme={light}>
-      <Router />
+      <CartProvider>
+        <Router />
+      </CartProvider>
     </ThemeProvider>
   );
 };

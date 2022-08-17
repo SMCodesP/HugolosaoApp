@@ -13,7 +13,7 @@ import {
   TitleItem,
 } from "./styles";
 
-const CardHistoryItem: ListRenderItem<THistoryItem> = ({ item }) => {
+const CardHistoryItem: ListRenderItem<TItem> = ({ item }) => {
   return (
     <Container>
       <RectButton

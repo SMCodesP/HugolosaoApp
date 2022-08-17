@@ -27,14 +27,14 @@ import {
 const Home = () => {
   const [search, setSearch] = useState("");
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
-  const [history, setHistory] = useState<THistoryItem[]>([]);
-  const [mostSellers, setMostSellers] = useState<THistoryItem[]>([]);
+  const [history, setHistory] = useState<TItem[]>([]);
+  const [mostSellers, setMostSellers] = useState<TItem[]>([]);
 
   const theme = useTheme();
 
   useEffect(() => {
     (async () => {
-      const { data: data_history } = await api.get<THistoryItem[]>(
+      const { data: data_history } = await api.get<TItem[]>(
         "/history?_sort=assessment&_order=desc"
       );
       setHistory(data_history);
