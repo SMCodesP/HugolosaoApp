@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions, TouchableHighlight } from "react-native";
 import { RectButton } from "react-native-gesture-handler";
 import Feather from "react-native-vector-icons/Feather";
 import styled from "styled-components/native";

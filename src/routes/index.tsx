@@ -4,6 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import MyTabs from "./bottom.routes";
 import { useTheme } from "styled-components/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
+import { Host } from "react-native-portalize";
+
 import Lunch from "../screens/Lunch";
 
 const Stack = createStackNavigator();
@@ -25,14 +28,16 @@ const Router = () => {
         },
       }}
     >
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="Main" component={MyTabs} />
-        <Stack.Screen name="Lunch" component={Lunch} />
-      </Stack.Navigator>
+      <Host>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="Main" component={MyTabs} />
+          <Stack.Screen name="Lunch" component={Lunch} />
+        </Stack.Navigator>
+      </Host>
     </NavigationContainer>
   );
 };

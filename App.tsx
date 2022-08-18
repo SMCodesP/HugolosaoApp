@@ -17,11 +17,13 @@ import { CartProvider } from "./src/contexts/CartContext";
 
 const App = () => {
   return (
-    <ThemeProvider theme={light}>
-      <CartProvider>
-        <Router />
-      </CartProvider>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={light}>
+        <CartProvider>
+          <Router />
+        </CartProvider>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 };
 

@@ -12,6 +12,8 @@ target 'HugulosaoApp' do
     :hermes_enabled => false
   )
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'HugulosaoAppTests' do
     inherit! :complete
     # Pods for testing

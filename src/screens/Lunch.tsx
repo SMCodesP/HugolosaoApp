@@ -109,7 +109,12 @@ const Lunch: React.FC<{
               <TextInformation>250 kcal</TextInformation>
             </ContainerInformation> */}
           </ContainerListInformation>
-          <ButtonAddToCart onPress={() => addItemCart(item, quantityItem)}>
+          <ButtonAddToCart onPress={() => {
+              addItemCart(item, quantityItem);
+              (navigation as any).navigate("Main", {
+                screen: "Carrinho"
+              })
+            }}>
             <ContainerAccessibleButtonAddToCart accessible>
               <MaterialCommunityIcons
                 size={17}

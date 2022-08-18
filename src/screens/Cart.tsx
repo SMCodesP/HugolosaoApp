@@ -1,7 +1,17 @@
-import React, { useEffect } from "react";
-import { FlatList, Text } from "react-native";
+import React, { useEffect, useRef } from "react";
+import {
+  FlatList,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { Modalize } from "react-native-modalize";
 import Feather from "react-native-vector-icons/Feather";
 import { useTheme } from "styled-components/native";
+
+import { Portal } from "react-native-portalize";
+
 import CardOrdered from "../components/CardOrdered";
 import { useCart } from "../contexts/CartContext";
 
@@ -17,13 +27,21 @@ import {
   ContainerIcon,
   ContainerTotalPrice,
   FooterCart,
+  SubTitle,
   TextPurchase,
   TextTotalPrice,
 } from "../styles/pages/cart";
+import TotalAmounts from "../components/Modals/TotalAmounts";
 
 const Cart: React.FC = () => {
   const theme = useTheme();
-  const { itemsInCart } = useCart();
+  const { itemsInCart, addItemCart } = useCart();
+
+  const modalizeRef = useRef<Modalize>(null);
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
 
   return (
     <Container>
@@ -37,32 +55,57 @@ const Cart: React.FC = () => {
         {/* <SubTitle>Nenhum pedido a ser concluído.</SubTitle> */}
         <FlatList
           data={itemsInCart}
-          renderItem={CardOrdered}
+          renderItem={({ ...props }) => (
+            <CardOrdered {...props} addItemCart={addItemCart} />
+          )}
           keyExtractor={(item) => item.id}
+          ListEmptyComponent={
+            <SubTitle>Nenhum pedido a ser concluído.</SubTitle>
+          }
         />
       </BodyCart>
 
-      <FooterCart
-        style={{
-          shadowColor: "#000",
-          shadowOffset: {
-            width: 0,
-            height: 5,
-          },
-          elevation: 10,
-        }}
-      >
-        <ContainerTotalPrice>
-          <TextTotalPrice>Total com a entrega</TextTotalPrice>
-          <ContainerIcon>
-            <TextTotalPrice>R$ 40,00</TextTotalPrice>
-            <Feather name="chevron-down" color={theme.foreground} size={20} />
-          </ContainerIcon>
-        </ContainerTotalPrice>
-        <ButtonPurchase>
-          <TextPurchase>Finalizar compra</TextPurchase>
-        </ButtonPurchase>
-      </FooterCart>
+      {itemsInCart.length !== 0 && (
+        <FooterCart
+          style={{
+            shadowColor: "#000",
+            shadowOffset: {
+              width: 0,
+              height: 5,
+            },
+            elevation: 10,
+          }}
+        >
+          <TouchableOpacity onPress={onOpen}>
+            <ContainerTotalPrice>
+              <TextTotalPrice>Total com a entrega</TextTotalPrice>
+              <ContainerIcon>
+                <TextTotalPrice>
+                  R${" "}
+                  {itemsInCart
+                    .reduce(
+                      (accumulator, currentItem) =>
+                        accumulator + currentItem.price * currentItem.quantity,
+                      0
+                    )
+                    .toFixed(2)}
+                </TextTotalPrice>
+                <Feather
+                  name="chevron-down"
+                  color={theme.foreground}
+                  size={20}
+                />
+              </ContainerIcon>
+            </ContainerTotalPrice>
+          </TouchableOpacity>
+          <ButtonPurchase>
+            <TextPurchase>Finalizar compra</TextPurchase>
+          </ButtonPurchase>
+        </FooterCart>
+      )}
+      <Portal>
+        <TotalAmounts modalizeRef={modalizeRef} />
+      </Portal>
     </Container>
   );
 };
