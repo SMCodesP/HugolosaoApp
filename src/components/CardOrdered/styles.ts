@@ -1,10 +1,10 @@
 import FastImage from "react-native-fast-image";
 import styled from "styled-components/native";
-import { DefaultText } from "../../styles/global";
 
 export const Container = styled.View`
   width: 100%;
   flex-direction: row;
+  margin-bottom: 15px;
 `;
 
 export const ItemImage = styled(FastImage)`

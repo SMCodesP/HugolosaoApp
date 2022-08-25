@@ -10,11 +10,14 @@ import {
   PriceItem,
 } from "./styles";
 
-const CardOrdered: ListRenderItem<TItemCart> = ({ item, addItemCart }) => (
+const CardOrdered: React.FC<{
+  item: TItemCart;
+  addItemCart: (item: TItem, quantity?: number) => void;
+}> = ({ item, addItemCart }) => (
   <Container>
     <ItemImage
       source={{
-        uri: "https://res.cloudinary.com/animetempest/image/upload/v1645492720/triple_cheese_gkblmf.jpg",
+        uri: item.image,
       }}
     />
     <ContainerInformations>

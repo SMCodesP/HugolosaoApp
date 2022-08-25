@@ -19,7 +19,12 @@ const TotalAmounts: React.FC<{
   const { itemsInCart } = useCart();
 
   return (
-    <Modalize ref={modalizeRef} snapPoint={200} panGestureEnabled={false}>
+    <Modalize
+      ref={modalizeRef}
+      snapPoint={200}
+      modalHeight={300}
+      panGestureEnabled={true}
+    >
       <Container>
         <TitleModal>Resumo de valores</TitleModal>
         <Information>

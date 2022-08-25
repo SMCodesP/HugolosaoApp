@@ -2,6 +2,8 @@ import React from "react";
 import { ListRenderItem } from "react-native";
 import { RectButton } from "react-native-gesture-handler";
 
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+
 import {
   Container,
   ContainerHistoryThumbnail,
@@ -13,13 +15,17 @@ import {
   TitleItem,
 } from "./styles";
 
-const CardHistoryItem: ListRenderItem<TItem> = ({ item }) => {
+const CardHistoryItem: React.FC<{
+  item: TItem;
+  navigation: NavigationProp<ReactNavigation.RootParamList>;
+}> = ({ item, navigation }) => {
+  const handleNavigation = () => {
+    (navigation as any).navigate("Lunch", { item });
+  };
+
   return (
     <Container>
-      <RectButton
-        rippleColor="#00000022"
-        onPress={() => console.log("clicou!")}
-      >
+      <RectButton rippleColor="#00000022" onPress={handleNavigation}>
         <ContainerItem>
           <ContainerHistoryThumbnail>
             <HistoryThumbnail source={{ uri: item.image }} />

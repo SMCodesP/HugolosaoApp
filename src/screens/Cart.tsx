@@ -35,7 +35,7 @@ import TotalAmounts from "../components/Modals/TotalAmounts";
 
 const Cart: React.FC = () => {
   const theme = useTheme();
-  const { itemsInCart, addItemCart } = useCart();
+  const { itemsInCart, addItemCart, clearCart } = useCart();
 
   const modalizeRef = useRef<Modalize>(null);
 
@@ -48,7 +48,7 @@ const Cart: React.FC = () => {
       <BodyCart>
         <ContainerHeader>
           <Title>Carrinho</Title>
-          <ClearButton rippleColor={theme.red}>
+          <ClearButton onPress={() => clearCart()} rippleColor={theme.red}>
             <ClearButtonText>Limpar</ClearButtonText>
           </ClearButton>
         </ContainerHeader>
@@ -82,13 +82,13 @@ const Cart: React.FC = () => {
               <ContainerIcon>
                 <TextTotalPrice>
                   R${" "}
-                  {itemsInCart
-                    .reduce(
+                  {(
+                    itemsInCart.reduce(
                       (accumulator, currentItem) =>
                         accumulator + currentItem.price * currentItem.quantity,
                       0
-                    )
-                    .toFixed(2)}
+                    ) + 15
+                  ).toFixed(2)}
                 </TextTotalPrice>
                 <Feather
                   name="chevron-down"

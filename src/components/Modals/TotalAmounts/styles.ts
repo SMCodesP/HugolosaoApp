@@ -19,6 +19,7 @@ export const Information = styled.View`
 
 export const TextInformation = styled.Text`
   font-family: "Jost-Medium";
+  color: ${({ theme }) => theme.foreground};
   font-size: 15px;
   padding: 0 10px;
 `;
@@ -26,5 +27,6 @@ export const TextInformation = styled.Text`
 export const TextImportant = styled(TextInformation)`
   font-family: "Jost-Bold";
   font-size: 16px;
+  color: ${({ theme }) => theme.foreground};
   padding: 0;
 `;

@@ -8,6 +8,7 @@ import CardHistoryItem from "../components/CardHistoryItem";
 import CardMostSeller from "../components/CardMostSeller";
 import { api } from "../services/api";
 
+import { useNavigation } from "@react-navigation/native";
 import {
   ButtonLunch,
   CardLunchUntried,
@@ -25,6 +26,8 @@ import {
 } from "../styles/pages/home";
 
 const Home = () => {
+  const navigation = useNavigation();
+
   const [search, setSearch] = useState("");
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
   const [history, setHistory] = useState<TItem[]>([]);
@@ -47,7 +50,7 @@ const Home = () => {
       <ContainerHome>
         <ContainerHead>
           <View>
-            <HomeTitle>Olá SMCodes,</HomeTitle>
+            <HomeTitle>Olá Hugo!</HomeTitle>
             <HomeSubTitle>O que você quer comer hoje?</HomeSubTitle>
           </View>
           <Feather name="more-vertical" size={24} color={theme.foreground} />
@@ -83,7 +86,9 @@ const Home = () => {
       <TitleItem>Seus pedidos</TitleItem>
       <FlatList
         data={history}
-        renderItem={CardHistoryItem}
+        renderItem={({ item }) => (
+          <CardHistoryItem item={item} navigation={navigation} />
+        )}
         keyExtractor={(item) => item.id}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
