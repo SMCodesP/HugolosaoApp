@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://184d-20-206-112-244.sa.ngrok.io",
+  baseURL: "http://191.232.179.16:3000",
   headers: {
-    "ngrok-skip-browser-warning": "true",
+    // "ngrok-sykip-browser-warning": "true",
   },
 });

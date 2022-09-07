@@ -6180,10 +6180,10 @@ react-native-shadow-2@^6.0.0:
   dependencies:
     polished "^4.1.4"
 
-react-native-spring-scrollview@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-spring-scrollview/-/react-native-spring-scrollview-3.0.2.tgz#fb4d28c4afe26eba6b16718f56524d1d798b4563"
-  integrity sha512-jBjgzL11ARN3O0nLDSrZBhhlRwJnRd7JAkVUiPS7EAuVT2aaqa96nsiLqv7c/RJXqZZ4tFLdu0iwY2/kZfDp2A==
+react-native-spring-scrollview@^4.0.0-dev-0:
+  version "4.0.0-dev-0"
+  resolved "https://registry.yarnpkg.com/react-native-spring-scrollview/-/react-native-spring-scrollview-4.0.0-dev-0.tgz#d682eca722f1062f360d1b1c2048845c7e197268"
+  integrity sha512-XFXW0ssG2IsgaRc+x3+zr48cMBJ9YJlqtKofPHLGMWBP+CUcrcuT9KrJuMzmhDp7fTOLV599D3Z7LfLnRBqDnQ==
   optionalDependencies:
     "@react-native-community/async-storage" "^1.12.1"
     lottie-ios "3.1.8"

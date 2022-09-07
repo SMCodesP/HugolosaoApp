@@ -3,7 +3,7 @@
     {
       "id": "2DSRt4fwkFJ1DSnOgD",
       "name": "Bebidas",
-      "image": "https://res.cloudinary.com/animetempest/image/upload/v1648749554/589-5895502_refrescos-png_bq0pvk.png"
+      "image": "https://res.cloudinary.com/animetempest/image/upload/v1661787417/soda-glass-bottle-icon_nrklnu.png"
     },
     {
       "id": "KVi5gi36VS2SqjBqa6",
@@ -81,7 +81,7 @@
       "name": "Artesanal Australian Burger",
       "price": 29,
       "image": "https://res.cloudinary.com/animetempest/image/upload/v1645492719/australian_burger_bfwcul.jpg",
-      "assessment": 4.0,
+      "assessment": 4,
       "sold": 18,
       "image_size": {
         "width": 854,

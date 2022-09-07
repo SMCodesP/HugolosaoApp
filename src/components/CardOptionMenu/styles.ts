@@ -22,9 +22,10 @@ export const ImageOption = styled.Image`
   width: 92px;
   height: 92px;
   position: absolute;
-  left: -24px;
-  top: -24px;
+  left: -32px;
+  top: -32px;
   transform: rotate(135deg);
+  opacity: 0.6;
 `;
 
 export const Container: any = styled(Shadow).attrs(({ theme }) => ({

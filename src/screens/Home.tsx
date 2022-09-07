@@ -4,9 +4,12 @@ import { FlatList, View, ScrollView } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import { useTheme } from "styled-components/native";
 
+import { darken } from 'polished';
+
 import CardHistoryItem from "../components/CardHistoryItem";
 import CardMostSeller from "../components/CardMostSeller";
-import { api } from "../services/api";
+
+import { history as historyData } from "../utils/db.json";
 
 import { useNavigation } from "@react-navigation/native";
 import {
@@ -24,29 +27,22 @@ import {
   TitleItem,
   UserAvatar,
 } from "../styles/pages/home";
+import { SpringScrollView } from "react-native-spring-scrollview";
 
 const Home = () => {
   const navigation = useNavigation();
 
   const [search, setSearch] = useState("");
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
-  const [history, setHistory] = useState<TItem[]>([]);
-  const [mostSellers, setMostSellers] = useState<TItem[]>([]);
+  const [history, setHistory] = useState<TItem[]>(historyData as TItem[]);
+  const [mostSellers, setMostSellers] = useState<TItem[]>(
+    (historyData as TItem[]).sort((a, b) => b.sold - a.sold)
+  );
 
   const theme = useTheme();
 
-  useEffect(() => {
-    (async () => {
-      const { data: data_history } = await api.get<TItem[]>(
-        "/history?_sort=assessment&_order=desc"
-      );
-      setHistory(data_history);
-      setMostSellers(data_history.sort((a, b) => b.sold - a.sold));
-    })();
-  }, []);
-
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <SpringScrollView showsVerticalScrollIndicator={false}>
       <ContainerHome>
         <ContainerHead>
           <View>
@@ -70,7 +66,7 @@ const Home = () => {
       </ContainerShadow>
 
       <CardLunchUntried>
-        <ButtonLunch>
+        <ButtonLunch rippleColor={darken(0.1, theme.cyan)}>
           <IconLunchUntried
             size={42}
             name="lunch-dining"
@@ -108,7 +104,7 @@ const Home = () => {
           <CardMostSeller key={mostSeller.id} item={mostSeller} />
         ))}
       </View>
-    </ScrollView>
+    </SpringScrollView>
   );
 };
 

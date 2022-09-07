@@ -1,4 +1,4 @@
-interface TMenuOptions {
+interface TMenuOption {
   id: string;
   name: string;
   image: string;

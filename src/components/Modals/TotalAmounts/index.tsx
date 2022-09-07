@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { Modalize } from "react-native-modalize";
 import { IHandles } from "react-native-modalize/lib/options";
+import { useTheme } from "styled-components/native";
 import { useCart } from "../../../contexts/CartContext";
 import {
   Container,
@@ -17,6 +18,7 @@ const TotalAmounts: React.FC<{
   modalizeRef: React.RefObject<IHandles>;
 }> = ({ modalizeRef }) => {
   const { itemsInCart } = useCart();
+  const theme = useTheme();
 
   return (
     <Modalize
@@ -24,6 +26,9 @@ const TotalAmounts: React.FC<{
       snapPoint={200}
       modalHeight={300}
       panGestureEnabled={true}
+      modalStyle={{
+        backgroundColor: theme.background
+      }}
     >
       <Container>
         <TitleModal>Resumo de valores</TitleModal>

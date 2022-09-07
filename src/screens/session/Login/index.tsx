@@ -22,6 +22,7 @@ import {
 const Login: React.FC = () => {
   const [userPassword, setUserPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  
   const [inputEmailIsFocus, setInputEmailIsFocus] = useState(false);
   const [inputPasswordIsFocus, setInputPasswordIsFocus] = useState(false);
   const navigation = useNavigation();

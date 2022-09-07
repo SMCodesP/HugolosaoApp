@@ -3,7 +3,9 @@ import { View } from "react-native";
 
 import { useTheme } from "styled-components/native";
 import CardOptionMenu from "../components/CardOptionMenu";
-import { api } from "../services/api";
+
+import { menuOptions } from "../utils/db.json";
+
 import { Title } from "../styles/global";
 import { InputIconSearch, InputItem } from "../styles/pages/home";
 import {
@@ -14,15 +16,8 @@ import {
 
 const Menu: React.FC = () => {
   const [inputSearchIsFocus, setInputSearchIsFocus] = useState(false);
-  const [options, setOptions] = useState<TMenuOptions[]>([]);
+  const [options, setOptions] = useState<TMenuOption[]>(menuOptions);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    (async () => {
-      const { data: dataOptions } = await api.get("/menuOptions");
-      setOptions(dataOptions);
-    })();
-  }, []);
 
   return (
     <ContainerMenu>
@@ -42,9 +37,9 @@ const Menu: React.FC = () => {
 
       <ContainerOptions
         data={options}
-        renderItem={CardOptionMenu as any}
+        renderItem={CardOptionMenu}
         numColumns={2}
-        keyExtractor={(item: any) => item.id}
+        keyExtractor={(item) => item.id}
       />
     </ContainerMenu>
   );

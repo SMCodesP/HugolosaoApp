@@ -1,3 +1,4 @@
+import { FlatList } from "react-native";
 import { Shadow } from "react-native-shadow-2";
 import styled from "styled-components/native";
 
@@ -5,7 +6,7 @@ export const ContainerMenu = styled.View`
   padding: 20px 15px;
 `;
 
-export const ContainerOptions = styled.FlatList`
+export const ContainerOptions = styled(FlatList<TMenuOption>)`
   width: 100%;
 `;
 
