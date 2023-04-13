@@ -27,11 +27,12 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-shadow-2": "^6.0.0",
-    "react-native-spring-scrollview": "^4.0.0-dev-0",
+    "react-native-stripe-checkout-webview": "^0.0.13",
     "react-native-svg": "^12.1.1",
     "react-native-text-ticker": "^1.14.0",
     "react-native-textinput-effects": "^0.6.2",
     "react-native-vector-icons": "^9.0.0",
+    "react-native-webview": "^11.23.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

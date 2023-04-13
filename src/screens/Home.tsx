@@ -4,7 +4,7 @@ import { FlatList, View, ScrollView } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
 import { useTheme } from "styled-components/native";
 
-import { darken } from 'polished';
+import { darken } from "polished";
 
 import CardHistoryItem from "../components/CardHistoryItem";
 import CardMostSeller from "../components/CardMostSeller";
@@ -27,7 +27,6 @@ import {
   TitleItem,
   UserAvatar,
 } from "../styles/pages/home";
-import { SpringScrollView } from "react-native-spring-scrollview";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -42,7 +41,7 @@ const Home = () => {
   const theme = useTheme();
 
   return (
-    <SpringScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <ContainerHome>
         <ContainerHead>
           <View>
@@ -104,7 +103,7 @@ const Home = () => {
           <CardMostSeller key={mostSeller.id} item={mostSeller} />
         ))}
       </View>
-    </SpringScrollView>
+    </ScrollView>
   );
 };
 

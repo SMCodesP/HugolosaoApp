@@ -11,6 +11,7 @@ import Feather from "react-native-vector-icons/Feather";
 import { useTheme } from "styled-components/native";
 
 import { Portal } from "react-native-portalize";
+import StripeCheckout from "react-native-stripe-checkout-webview";
 
 import CardOrdered from "../components/CardOrdered";
 import { useCart } from "../contexts/CartContext";
@@ -32,12 +33,16 @@ import {
   TextTotalPrice,
 } from "../styles/pages/cart";
 import TotalAmounts from "../components/Modals/TotalAmounts";
+import StripePayment from "../components/Modals/StripePayment";
+import { useNavigation } from "@react-navigation/native";
 
 const Cart: React.FC = () => {
   const theme = useTheme();
+  const navigation = useNavigation();
   const { itemsInCart, addItemCart, clearCart } = useCart();
 
   const modalizeRef = useRef<Modalize>(null);
+  const paymentModalizeRef = useRef<Modalize>(null);
 
   const onOpen = () => {
     modalizeRef.current?.open();
@@ -98,7 +103,11 @@ const Cart: React.FC = () => {
               </ContainerIcon>
             </ContainerTotalPrice>
           </TouchableOpacity>
-          <ButtonPurchase>
+          <ButtonPurchase
+            onPress={() => {
+              (navigation as any).navigate("Stripe");
+            }}
+          >
             <TextPurchase>Finalizar compra</TextPurchase>
           </ButtonPurchase>
         </FooterCart>

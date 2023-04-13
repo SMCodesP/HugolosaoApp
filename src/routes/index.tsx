@@ -8,6 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Host } from "react-native-portalize";
 
 import Lunch from "../screens/Lunch";
+import StripeTemporary from "../screens/StripeTemporary";
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,7 @@ const Router = () => {
         >
           <Stack.Screen name="Main" component={MyTabs} />
           <Stack.Screen name="Lunch" component={Lunch} />
+          <Stack.Screen name="Stripe" component={StripeTemporary} />
         </Stack.Navigator>
       </Host>
     </NavigationContainer>
